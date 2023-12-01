@@ -50,47 +50,43 @@ ___________________________________________________
 ### Задание 3. level gold
 
 ```JavaScript
-var quantity_of_workers = prompt ('Введите кол-во человек ', undefined);
+        let quantityOfWorkers = prompt('Введите кол-во человек', undefined);
 
-    if (!isNaN(parseFloat(quantity_of_workers))) {
-        quantity_of_workers = parseFloat(quantity_of_workers);
-    } else {
-        quantity_of_workers = 0;
-    }
-
-    while (quantity_of_workers === 0) {
-
-        quantity_of_workers = prompt ('Введите кол-во человек ', undefined);
-
-        if (!isNaN(parseFloat(quantity_of_workers))) {
-            quantity_of_workers = parseFloat(quantity_of_workers);
+        if (!isNaN(parseFloat(quantityOfWorkers))) {
+            quantityOfWorkers = parseFloat(quantityOfWorkers);
         } else {
-            quantity_of_workers = 0;
+            quantityOfWorkers = 0;
         }
 
-    }
+        while (quantityOfWorkers === 0) {
+            quantityOfWorkers = prompt('Введите кол-во человек', undefined);
 
-    var salary_per_worker = prompt ('Введите зарплату на человека ', undefined);
-
-    if (!isNaN(parseFloat(salary_per_worker))) {
-        salary_per_worker = parseFloat(salary_per_worker);
-    } else {
-        salary_per_worker = 0;
-    }
-
-    while (salary_per_worker === 0) {
-
-        salary_per_worker = prompt ('Введите зарплату на человека ', undefined);
-
-        if (!isNaN(parseFloat(salary_per_worker))) {
-            salary_per_worker = parseFloat(salary_per_worker);
-        } else {
-            salary_per_worker = 0;
+            if (!isNaN(parseFloat(quantityOfWorkers))) {
+                quantityOfWorkers = parseFloat(quantityOfWorkers);
+            } else {
+                quantityOfWorkers = 0;
+            }
         }
 
-    }
+        let salaryPerWorker = prompt('Введите зарплату на человека', undefined);
 
-    alert('Затраты на ЗП ' + quantity_of_workers*salary_per_worker);
+        if (!isNaN(parseFloat(salaryPerWorker))) {
+            salaryPerWorker = parseFloat(salaryPerWorker);
+        } else {
+            salaryPerWorker = 0;
+        }
+
+        while (salaryPerWorker === 0) {
+            salaryPerWorker = prompt('Введите зарплату на человека', undefined);
+
+            if (!isNaN(parseFloat(salaryPerWorker))) {
+                salaryPerWorker = parseFloat(salaryPerWorker);
+            } else {
+                salaryPerWorker = 0;
+            }
+        }
+
+        alert('Затраты на ЗП ' + quantityOfWorkers * salaryPerWorker);
 ```
 ![](img/R3.png)
 ![](img/R3.2.png)
@@ -99,48 +95,47 @@ var quantity_of_workers = prompt ('Введите кол-во человек ', 
 ### Задание 4
 
 ```JavaScript
-var group_of_students = [{full_name:'Петров А.А.',rating:5},
-    {full_name:'Иванов Б.Б.',rating:3.4},{full_name:'Сидоров Г.Г.',rating:9},
-    {full_name:'Немолодой Д.Д',rating:2},{full_name:'Молодой Е.Е',rating:3.4}];
+    let groupOfStudents = [{fullName:'Петров А.А.',rating:5},
+    {fullName:'Иванов Б.Б.',rating:3.4},{fullName:'Сидоров Г.Г.',rating:9},
+    {fullName:'Немолодой Д.Д',rating:2},{fullName:'Молодой Е.Е',rating:3.4}];
 
-    var average_rating = 0;
-    var quality_of_students = 0;
-    var bad_students = [];
+    let averageRating = 0;
+    let qualityOfStudents = 0;
+    let badStudents = [];
 
-    for (var index_for_students = 0; index_for_students < group_of_students.length; index_for_students++) {
-        
-        if (group_of_students[index_for_students].rating > 5) {
+    for (let indexForStudents = 0; indexForStudents < groupOfStudents.length; indexForStudents++) {
+
+        if (groupOfStudents[indexForStudents].rating > 5) {
              console.log('Это значение учитываться не будет оно не соответствует допустимым значениям');
         }
 
-        if (group_of_students[index_for_students].rating < 0) {
+        if (groupOfStudents[indexForStudents].rating < 0) {
             console.log('Это значение учитываться не будет оно не соответствует допустимым значениям');
         }
 
-        //Не уверен, но тут может быть перенос строки
-        if (!(group_of_students[index_for_students].rating <= 5 && group_of_students[index_for_students].rating >= 0)) {
+        if (!(groupOfStudents[indexForStudents].rating <= 5 && groupOfStudents[indexForStudents].rating >= 0)) {
             continue;
         }
 
-        if (group_of_students[index_for_students].rating < 4) {
-            bad_students.push(group_of_students[index_for_students]);
+        if (groupOfStudents[indexForStudents].rating < 4) {
+            badStudents.push(groupOfStudents[indexForStudents]);
         }
 
-        average_rating += group_of_students[index_for_students].rating;
-        quality_of_students += 1;
+        averageRating += groupOfStudents[indexForStudents].rating;
+        qualityOfStudents += 1;
     }
 
-    average_rating = average_rating / quality_of_students;
+    averageRating = averageRating / qualityOfStudents;
 
-    console.log('Средняя оценка: ' + average_rating);
+    console.log('Средняя оценка: ' + averageRating);
 
     console.log('Плохие студенты:');
 
-    if(bad_students.length === 0) {
+    if(badStudents.length === 0) {
         console.log('Таких нет');
     }
 
-    bad_students.forEach((index) => {console.log('Фио: ' + index.full_name + '; Оценка: ' + index.rating) });
+    badStudents.forEach((index) => {console.log('Фио: ' + index.fullName + '; Оценка: ' + index.rating) });
 ```
 ![](img/R4.png)
 

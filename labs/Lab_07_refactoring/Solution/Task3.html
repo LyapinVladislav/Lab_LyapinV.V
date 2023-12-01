@@ -7,17 +7,7 @@
 </head>
 <body>
     <script>
-    var quantityOfWorkers = prompt ('Введите кол-во человек ', undefined);
-
-    if (!isNaN(parseFloat(quantityOfWorkers))) {
-        quantityOfWorkers = parseFloat(quantityOfWorkers);
-    } else {
-        quantityOfWorkers = 0;
-    }
-
-    while (quantityOfWorkers === 0) {
-
-        quantityOfWorkers = prompt ('Введите кол-во человек ', undefined);
+        let quantityOfWorkers = prompt('Введите кол-во человек', undefined);
 
         if (!isNaN(parseFloat(quantityOfWorkers))) {
             quantityOfWorkers = parseFloat(quantityOfWorkers);
@@ -25,19 +15,17 @@
             quantityOfWorkers = 0;
         }
 
-    }
+        while (quantityOfWorkers === 0) {
+            quantityOfWorkers = prompt('Введите кол-во человек', undefined);
 
-    var salaryPerWorker = prompt ('Введите зарплату на человека ', undefined);
+            if (!isNaN(parseFloat(quantityOfWorkers))) {
+                quantityOfWorkers = parseFloat(quantityOfWorkers);
+            } else {
+                quantityOfWorkers = 0;
+            }
+        }
 
-    if (!isNaN(parseFloat(salaryPerWorker))) {
-        salaryPerWorker = parseFloat(salaryPerWorker);
-    } else {
-        salaryPerWorker = 0;
-    }
-
-    while (salaryPerWorker === 0) {
-
-        salaryPerWorker = prompt ('Введите зарплату на человека ', undefined);
+        let salaryPerWorker = prompt('Введите зарплату на человека', undefined);
 
         if (!isNaN(parseFloat(salaryPerWorker))) {
             salaryPerWorker = parseFloat(salaryPerWorker);
@@ -45,9 +33,17 @@
             salaryPerWorker = 0;
         }
 
-    }
+        while (salaryPerWorker === 0) {
+            salaryPerWorker = prompt('Введите зарплату на человека', undefined);
 
-    alert('Затраты на ЗП ' + quantityOfWorkers*salaryPerWorker);
+            if (!isNaN(parseFloat(salaryPerWorker))) {
+                salaryPerWorker = parseFloat(salaryPerWorker);
+            } else {
+                salaryPerWorker = 0;
+            }
+        }
+
+        alert('Затраты на ЗП ' + quantityOfWorkers * salaryPerWorker);
     </script>
 </body>
 </html>
