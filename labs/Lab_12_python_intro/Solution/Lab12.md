@@ -77,13 +77,14 @@ if __name__ == '__main__':
     width, height = map(int, input().split())
     print(count_horse_paths(width, height))
 ```
-**Результат:**
-
-![](img/R1.1.png)
-![](img/R1.2.png)
 
 </details>
 
+**Результат:**
+
+![](img/R1.1.png)
+
+![](img/R1.2.png)
 ___________________________________________________
 
 
@@ -170,13 +171,14 @@ if __name__ == '__main__':
     numbers = [int(number) for number in input().split()][1:]
     print(subarrays_medians_sum(numbers))
 ```
-**Результат:**
-
-![](img/R2.1.png)
-![](img/R2.2.png)
 
 </details>
 
+**Результат:**
+
+![](img/R2.1.png)
+
+![](img/R2.2.png)
 ___________________________________________________
 
 ## Task 3
@@ -284,11 +286,13 @@ if __name__ == '__main__':
     text = input()
     print(to_characters_histogram(text))
 ```
+
+</details>
+
 **Результат:**
 
 ![](img/R3.1.png)
-![](img/R3.2.png)
 
-</details>
+![](img/R3.2.png)
 
 ___________________________________________________
